@@ -1,5 +1,5 @@
 === Woo vendor module ===
-Contributors: woocommerce
+Contributors: shankaranand12
 Tags: woo vendor,vendor,vendor system,vendor shop,product vendor,product vendors,seller,shop
 Requires at least: 3.1
 Tested up to: 4.1.1
