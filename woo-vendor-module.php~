@@ -1,0 +1,81 @@
+<?php
+/*
+ * Plugin Name:Woo Vendor Module
+ * Plugin uri:http://codex.wordpress.com
+ * Author:Shankaranand
+ * Author uri:http://codex.wordpress.com
+ * Description:This plugin is used for add the vendor functionality in woocommerce plugin.It will provide the functionality for adding the product through front end as well as vendor can seen all the ordered product till date.  
+ * Version:1.0
+ * Text Domain:wooVendor
+ */
+
+// Make sure we don't expose any info if called directly
+if (!function_exists('add_action')) {
+    echo 'Hi there!  I\'m just a plugin, not much I can do when called directly.';
+    exit;
+}
+
+if (!defined('ABSPATH')) {
+     exit; // Exit if accessed directly
+}
+
+define('WOO_VENDOR__PLUGIN_URL', plugin_dir_url(__FILE__));
+define('WOO_VENDOR__PLUGIN_DIR', plugin_dir_path(__FILE__));
+
+/*
+ * Befor using plugin services, we need to check that woocommerce is allready activated or not.
+ */
+if (!class_exists('WooCommerce')) :
+
+    class myPlugin {
+
+        public function __construct() {
+
+            register_activation_hook(__FILE__, array($this, 'activate'));
+        }
+
+        function activate() {
+
+            // Check PHP Version and deactivate & die if it doesn't meet minimum requirements.
+            deactivate_plugins(plugin_basename(__FILE__));
+            echo '<p>Author Request :Woocommerce Plugin Needed</p>';
+            wp_die('This plugin requires woocommerce plugin so please first install woocommerce plugin then activate it.  Sorry about that.');
+        }
+
+    }
+
+//call this class
+    new myPlugin();
+endif;
+
+    /*
+     * After verify we will start the plugin work .
+     */
+
+    class wvinit_plugin {
+
+        public function __construct() {
+            ob_start();
+            add_action('init', array($this, 'initialize_plugin_key_file'));
+        }
+
+        function initialize_plugin_key_file() {
+            /*
+             * Woo vendor plugin functions 
+             */
+            require_once WOO_VENDOR__PLUGIN_DIR . 'include/wv-functions.php';
+
+            /*
+             * initialization plugin.
+             */
+            require_once WOO_VENDOR__PLUGIN_DIR . 'init/wv-init.php';
+            /*
+             * customize pages
+             */
+            include_once WOO_VENDOR__PLUGIN_DIR.'pages/wv-pages.php';
+        }
+
+    }
+
+    new wvinit_plugin();
+
