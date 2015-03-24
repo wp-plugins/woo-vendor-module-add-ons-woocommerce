@@ -43,6 +43,6 @@ Major features in woo vendor include:
 
 == Changelog ==
 
-= 1.0 =
+= 1.01 =
 *Release Date - 27th Feb, 2015*
 
