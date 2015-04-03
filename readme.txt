@@ -31,20 +31,10 @@ Major features in woo vendor include:
 3. After activating check all the settings on below path : Admin Menu : woocommerce -> woo vendors.
 
 == Screenshots ==
-
-See the vendor module screenshot.
-1. Screenshot-main.png : it have a short summary of the Backend and shop of frontend. 
-2. screenshot1.png    : Admin module general setting.
-3. screenshot2.png    : Admin module page settings.
-4. screenshot3.png    : Admin module commission settings.
-5. screenshot4.png    : Frontend Myaccount information .
-6. screenshot5.png    : Vendor order history.
-7. screenshot-shop.png : Vendor shop with unique URL.
-
-
-
-== Changelog ==
-
-= 1.01 =
-*Release Date - 27th Feb, 2015*
-
+1. screenshot1.png    : Admin module general setting.
+2. screenshot2.png    : Admin module page settings.
+3. screenshot3.png    : Admin module commission settings.
+4. screenshot4.png    : Frontend Myaccount information .
+5. screenshot5.png    : Vendor order history.
+6. screenshot-shop.png : Vendor shop with unique URL.
+7. Screenshot-main.png : it have a short summary of the Backend and shop of frontend.
