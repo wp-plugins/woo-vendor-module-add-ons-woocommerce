@@ -1,6 +1,6 @@
 === Woo vendor module ===
 Contributors: shankaranand12
-Tags: woo vendor,vendor,vendor system,vendor shop,product vendor,product vendors,seller,shop,woocommerce shop
+Tags: woo vendor,vendor,vendor system,vendor shop,product vendor,product vendors,seller,shop,woocommerce shop,vendor plugin,product vendors plugin
 Requires at least: 3.1
 Tested up to: 4.1.1
 Stable tag: 3.0.4

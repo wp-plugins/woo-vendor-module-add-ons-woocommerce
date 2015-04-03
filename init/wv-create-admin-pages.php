@@ -4,7 +4,7 @@
  * This file creates the following pages in admin
  * i)- vendor myaccount       -[woovendor_vendor_myaccount]
  * ii)- vendor order history  -[woovendor_vendor_order_history]
- * iii)-
+ * iii)-ter
  */
 //creating an object of the functions class.
 
