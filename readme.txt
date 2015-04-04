@@ -32,9 +32,16 @@ Major features in woo vendor include:
 
 == Screenshots ==
 1. screenshot1.png    : Admin module general setting.
+
 2. screenshot2.png    : Admin module page settings.
+
 3. screenshot3.png    : Admin module commission settings.
+
 4. screenshot4.png    : Frontend Myaccount information .
+
 5. screenshot5.png    : Vendor order history.
+
 6. screenshot-shop.png : Vendor shop with unique URL.
+
 7. Screenshot-main.png : it have a short summary of the Backend and shop of frontend.
+
