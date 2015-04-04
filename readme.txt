@@ -31,6 +31,7 @@ Major features in woo vendor include:
 3. After activating check all the settings on below path : Admin Menu : woocommerce -> woo vendors.
 
 == Screenshots ==
+
 1. screenshot1.png    : Admin module general setting.
 
 2. screenshot2.png    : Admin module page settings.
