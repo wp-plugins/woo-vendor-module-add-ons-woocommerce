@@ -24,8 +24,7 @@ Major features in woo vendor include:
 * Vendor can pramote the own shop URL.
 * When vendor create product then it will waiting for admin approval.After that it will display on frontend.
 
-please use the below link for setting this plugin : https://shankaranandmaurya.wordpress.com/woo-vendor-module/
-or click on it <a href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
+Click on visit plugin setting <a href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
 
 
 == Installation ==
@@ -36,21 +35,5 @@ or click on it <a href="https://shankaranandmaurya.wordpress.com/woo-vendor-modu
 
 == Screenshots ==
 
-Hi,
-please use the below link for setting this plugin : https://shankaranandmaurya.wordpress.com/woo-vendor-module/
-or click on it <a href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
-
-1. screenshot1.png    : Admin module general setting.
-
-2. screenshot2.png    : Admin module page settings.
-
-3. screenshot3.png    : Admin module commission settings.
-
-4. screenshot4.png    : Frontend Myaccount information .
-
-5. screenshot5.png    : Vendor order history.
-
-6. screenshot-shop.png : Vendor shop with unique URL.
-
-7. Screenshot-main.png : it have a short summary of the Backend and shop of frontend.
+Click on visit plugin setting <a target="_blank" href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
 
