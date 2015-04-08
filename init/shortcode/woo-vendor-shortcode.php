@@ -43,7 +43,15 @@ class wvm_wooVendorShortcode {
             $vendor_userid = $userinfo->ID;
             $output = (new wvm_wooVendorShortcode)->wv_vendor_shop_html($vendor_userid, $vendor_username);
         } else {
-            $output = "<p>Vendor shop URL is not valid so please contact the vendor and if still not resolved then please inform the administrator.</p>";
+            $output = "<p>Vendor shop URL is not valid so please visit MyAccount page and correct the URL. Please also sure that you have updated the permalink.</p>";
+             $woocommerce_myaccount_id = get_option('woovendors_pages');
+             
+             if(count($woocommerce_myaccount_id)>0){
+                 $vendor_myaccount         =$woocommerce_myaccount_id['vendor_myaccount'];
+                 $output.="<a href='".  get_permalink($vendor_myaccount)."' title='Visit Myaccount' >Visit MyAccount Page</a>";
+             }
+             
+             
         }
 
         return $output;
@@ -65,7 +73,10 @@ class wvm_wooVendorShortcode {
         // 1= Logged in
 
         if ($userLogin == 0) {
-            return "<p>You should login before accessing this URL.</p>";
+            $woocommerce_myaccount_id = get_option('woocommerce_myaccount_page_id');
+            return "<p>You should login from woocommerce login form before accessing this URL.</p>"
+            . "<a href='".  get_permalink($woocommerce_myaccount_id)."' title='login'>Login</a>";
+            
         }
 
         //else condition if user logged in.
@@ -243,7 +254,12 @@ class wvm_wooVendorShortcode {
         <!-- paging start here -->
             <?php
         else:
-            echo "<p>Sorry No order take place.</p>";
+            $woocommerce_myaccount_id = get_option('woovendors_pages');
+            $vendor_myaccount         =$woocommerce_myaccount_id['vendor_myaccount'];
+                 
+             echo "<p>Sorry No order take place or your order URL is invalid."
+            . "  For correct order URL,please visit the <a href='".  get_permalink($vendor_myaccount)."' title='Visit MyAccount'>MyAccount page</a></p>";
+            
         endif;
         wp_reset_query();
         $output = ob_get_contents();

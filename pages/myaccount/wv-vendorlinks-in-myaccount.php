@@ -33,7 +33,7 @@ function wvm_adding_custom_registration_fields() {
              * adding the role as per admin settings.
              * Temporary : I have added the vendor role Now second role whose pending : vendor_pending
              */
-            $rolesArr = array('pending_vendor' => 1);
+            $rolesArr = array('wvm_role_pending_vendor' => 1);
             update_user_meta($user_id, 'wp_capabilities', $rolesArr);
         } else {
             update_user_meta($user_id, 'vendor_account', 0);

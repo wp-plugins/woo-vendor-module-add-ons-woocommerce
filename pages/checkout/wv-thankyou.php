@@ -57,16 +57,21 @@ function wvm_create_extra_metakey_after_purchase($order_id) {
                  * key : woo_order_vendor_id         : when we trace all the order by vendor then it will be uses
                  * key : woo_order_commision_11
                  */
-                if ($userRoles == "vendor") {
+                if ($userRoles == "wvm_role_vendor") {
 
                     $pprice = get_post_meta($product_purchase_id, '_price', TRUE);
-                    
-                    //Commission will be % of product price.
-                    
-                    $commission = ($pprice*10)/100; //it will be in % i.e 10% .
-                    
-                    
 
+                    //Commission will be % of product price.
+                    /*
+                     * Getting the default commission which is set by the admin
+                     */
+                    $defualt_comm_arr = get_option('woovendor_tab_general');
+                    $defualt_comm     = $defualt_comm_arr['default_commission'];
+                    //initialize 10 if not set
+                    $defualt_comm     = (empty($defualt_comm))?"10":$defualt_comm;                    
+                    
+                    
+                    $commission = ($pprice * $defualt_comm) / 100; //it will be in % i.e 10% .
                     //In every loop,I need for creating an new key 
                     $pid = $product_purchase_id;
                     add_post_meta($order_id, 'woo_order_product_price_' . $pid, $pprice);
@@ -80,8 +85,19 @@ function wvm_create_extra_metakey_after_purchase($order_id) {
                     //extra key which provide information i.e how many vendor products have been sold of this order.
                     update_post_meta($order_id, 'woo_order_total_vendor_products', $inc);
                     ++$inc;
+                    //***************************************
+                    //Admin email 
+                    $email_authors = array();
+                    $email_authors[]=get_the_author_meta('user_email', $authorid );                
+                    //print_r($email_authors);
+                    
+                    //*********************************************
                 }//user roles vendor
             }//foreach.
+            //added all the email to the session
+            @session_start();
+           $_SESSION['VENDOR_EMAILS']=  json_encode($email_authors);
+           
         }//count condition.    
     }//condition if 
 }
@@ -97,5 +113,4 @@ function wv_thankyou_get_authorid_by_postid($postid) {
     $authorid = $arr_authorid->post_author;
     return $authorid;
 }
-
 ?>

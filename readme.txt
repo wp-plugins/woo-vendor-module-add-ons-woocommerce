@@ -5,25 +5,30 @@ Requires at least: 3.1
 Tested up to: 4.1.1
 Stable tag: 3.0.4
 
-Woo vendor is used with woocommerce plugin for creating an vendor system.It also works for product management with vendor ,provide vendor shop with unique URL as well as manage the commission of vendor .
-
+Woo vendor module is used for vendor system with woocommerce website.It allow anyone to open a store on your site! 
 == Description ==
-
-Woo vendor is used with woocommerce plugin for creating an vendor system.It also works for product management with vendor ,provide vendor shop with unique URL as well as manage the commission of vendor.Administrator have full power to prevent any vendor as well as allow it's shop on own website.
 
 Major features in woo vendor include:
 
-* When any user registered then it will waiting for admin approval .After approval it will works as an vendor.
-* Admin will approves the every vendor then it will responsible for creating an woocommerce product and make an shop.
-* Vendor have the own unique SHOP url so it can also be pramote it. 
+* Vendor can create and manage the own product.
+* Vendor can check our sales report in daily basis as well as product basis.
+* Vendor have a unique shop url.
+* Vendor can check our order history.
 
-* Admin have the power to remove any shop on any time.
-* Admin will manage the commission of any vendor and will responsible for due it also .
-* When any product created by the vendor then it will wait for admin approval, after that it will display on frontend. 
+* Admin can delete the any vendor.
+* Admin have an authority to approved/disapproved of every product of vendor.
+* Admin can manage the commission module of vendor.
 
-* Vendor can pramote the own shop URL.
-* When vendor create product then it will waiting for admin approval.After that it will display on frontend.
+Steps for settings the plugin :
 
+1: When a new vendor is registered via woocommerce My Account registration form then it will be for admin review. After admin approved it will allow for product uploading.
+2: When a vendor uploaded the product then it will be waiting for admin approval after that it will be publish.
+3: All these setting have been defined in Vendor Myaccount page like Shop page, order history page as well as order information.
+
+Click on visit plugin setting <a target="_blank" href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
+
+
+=======
 Click on visit plugin setting <a target="_blank" href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
 
 

@@ -62,7 +62,7 @@ class wvm_core_wvfunctions {
 
         $userRoles = $this->wv_get_loggedin_user_role();
         //remove some points when vendor login :admin
-        if ($userRoles == "vendor") {
+        if ($userRoles == "wvm_role_vendor") {
             ?>
             <style>
                 ul.subsubsub li.all,ul.subsubsub li.publish{display:none;}
@@ -82,7 +82,7 @@ class wvm_core_wvfunctions {
             global $user_ID;
             $roles = $this->wv_get_loggedin_user_role();
             //if roles is vendor then set the posts by author wise.
-            if ($roles == "vendor") {
+            if ($roles == "wvm_role_vendor") {
                 $query->set('author', $user_ID);
             }
         }

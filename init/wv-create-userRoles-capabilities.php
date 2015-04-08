@@ -25,9 +25,9 @@ $capability_vendor = array(
 );
 
 
-$objfun->wv_create_user_roles("Pending Vendor", "pending_vendor", $capability_pendingvendor);
+$objfun->wv_create_user_roles("Pending Vendor", "wvm_role_pending_vendor", $capability_pendingvendor);
 
-$objfun->wv_create_user_roles("Vendor", "vendor", $capability_vendor);
+$objfun->wv_create_user_roles("Vendor", "wvm_role_vendor", $capability_vendor);
 //update the info on the database.
 //key: is_role_created    :
 $objfun->wv_update_plugin_action_info('is_role_created',1);

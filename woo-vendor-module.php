@@ -3,9 +3,9 @@
  * Plugin Name:Woo Vendor Module
  * Plugin uri:
  * Author:shankaranand12
- * Author uri:http://about.me/shankaranand
+ * Author uri:https://shankaranandmaurya.wordpress.com/woo-vendor-module/
  * Description:Woo vendor is used with woocommerce plugin for creating an vendor system.It also works for product management with vendor ,provide vendor shop with unique URL as well as manage the commission of vendor.Administrator have full power to prevent any vendor as well as allow it's shop on own website.
- * Version:1.0
+ * Version:1.2
  * Text Domain:woo-vendor-module
  */
 
@@ -57,6 +57,13 @@ class wvm_activated_with_woocommerce {
     public function __construct() {
         ob_start();
         add_action('init', array($this, 'wvm_initialize_plugin_key_file'));
+       /*
+        * When plugin activated then initialize the some key feature like
+        * 1: user roles,
+        * 2: check the registration form on myaccount page in woocommerce.
+        */
+        register_activation_hook(__FILE__, array($this, 'wvm_initialize_key_feature'));
+                    
     }
 
     function wvm_initialize_plugin_key_file() {
@@ -74,6 +81,51 @@ class wvm_activated_with_woocommerce {
          */
         include_once WOO_VENDOR__PLUGIN_DIR . 'pages/wv-pages.php';
     }
+    
+     /*
+     * Init level actions will handle the two files.
+     * 1:Create user roles and capability
+     * 2:Create admin pages
+     * Note:Befor adding the actions file,I need to check it from Database and if not created then create it.
+     * 0 or "" => means not created.
+     * 1       => created.
+     * Key : plugin_key_actions
+     * Sub key :: is_role_created    :
+     *          : is_create_page     :
+     */
+   
+  function wvm_initialize_key_feature(){
+      
+      $this->wvm_initialize_plugin_key_file();
+      
+      $plugin_key_actions = get_option('plugin_key_actions');
+        $is_role_created    = $plugin_key_actions['is_role_created'];
+        
+      // if(empty($is_role_created) OR $is_role_created == 0){
+       /*
+        *Create two types of the user roles.
+        * 1: pending vendor
+        * 2: vendor 
+        */
+       include_once WOO_VENDOR__PLUGIN_DIR.'init/wv-create-userRoles-capabilities.php';
+      // }
+       //for page created.
+      $is_create_page     = $plugin_key_actions['is_create_page'];
+       if(empty($is_create_page) OR $is_create_page == 0){
+           /*
+            * create three pages,
+            * i)- vendor myaccount       -[woovendor_vendor_myaccount]
+            * ii)- vendor order history  -[woovendor_vendor_order_history]
+            * iii)- Vendor shop          -[woo_vendor_shop]   
+            */
+           include_once WOO_VENDOR__PLUGIN_DIR.'init/wv-create-admin-pages.php';           
+       }
+     /*
+      * When plugin activated then it will check the registration form which is established in myaccount page.
+      * Woocommerce => settings => option(Enable registration on the "My Account" page)
+      */  
+     update_option('woocommerce_enable_myaccount_registration','yes');
+  }  
 
 }
 
