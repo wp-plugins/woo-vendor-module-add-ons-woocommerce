@@ -21,9 +21,11 @@ Major features in woo vendor include:
 
 Steps for settings the plugin :
 
-1: When a new vendor is registered via woocommerce My Account registration form then it will be for admin review. After admin approved it will allow for product uploading.
-2: When a vendor uploaded the product then it will be waiting for admin approval after that it will be publish.
-3: All these setting have been defined in Vendor Myaccount page like Shop page, order history page as well as order information.
+*: When a new vendor is registered via woocommerce My Account registration form then it will be for admin review. After admin approved it will allow for product uploading.
+
+*: When a vendor uploaded the product then it will be waiting for admin approval after that it will be publish.
+
+*: All these setting have been defined in Vendor Myaccount page like Shop page, order history page as well as order information.
 
 Click on visit plugin setting <a target="_blank" href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
 
