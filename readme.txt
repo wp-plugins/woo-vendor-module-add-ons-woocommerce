@@ -27,11 +27,11 @@ Steps for settings the plugin :
 
 *: All these setting have been defined in Vendor Myaccount page like Shop page, order history page as well as order information.
 
-Click on visit plugin setting <a target="_blank" href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
+Click on visit plugin setting <a target="_blank" href="http://roomrent.org/my-developed-plugins/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
 
 
 =======
-Click on visit plugin setting <a target="_blank" href="https://shankaranandmaurya.wordpress.com/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
+Click on visit plugin setting <a target="_blank" href="http://roomrent.org/my-developed-plugins/woo-vendor-module/" title="Visit plugin settings">Visit plugin setting </a>
 
 
 == Installation ==
